@@ -1,0 +1,20 @@
+.ofertas-p{
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    color: #202020;
+    margin: 5% 40% 0 40%;
+
+}
+.ofertas{
+    font-family: Elsie Swash Caps;
+    font-size: 82px;
+    font-weight: 900;
+    text-align: center;
+    color: #202020;
+}
+.ofertas-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}

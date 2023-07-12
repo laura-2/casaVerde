@@ -1,0 +1,45 @@
+.secao{
+    width: 480px;
+    display: block;
+    margin: 10% 0 0 15%;
+    color: #202020;
+}
+.secao-arvore{
+    display: flex;
+}
+.arvore{
+    margin: -20px -30px 0px -90px;
+    z-index: 2;
+    width: 600px;
+}
+.secao-casa{
+    font-size: 22px;
+    margin-bottom: -50px;
+}
+.secao-planta{
+    font-size: 82px;
+    font-family: 'Elsie Swash Caps', cursive;
+    margin-bottom: 20px;
+}
+.secao-paragrafo{
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+.secao-flex{
+    display: flex;
+    width: 800px;
+}
+.secao-input{
+    width: 41%;
+    padding: 20px 30px;
+    border-color: rgba(219, 219, 219, 0.753);
+    font-size: 16px;
+}
+.secao-button{
+    background-color: #FFCB47;
+    box-shadow: 10px 10px 30px rgba(255, 203, 71, 0.3);
+    color: white;
+    padding: 15px 20px;
+    border-color: #FFCB47;
+    font-size: 16px;
+}

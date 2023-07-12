@@ -1,0 +1,39 @@
+.box{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.planta{
+    width: 400px;
+}
+.box-escrita{
+    width: 23%;
+    padding: 0 0 0 5%;
+}
+.box-title{
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 400;
+    color: #202020;
+
+}
+.box-title-strong{
+    font-family: Elsie Swash Caps;
+    font-size: 42px;
+    font-weight: 900;
+    color: #202020;
+
+}
+.box-lista{
+    list-style: none;
+}
+.bolinha{
+    width: 5%;
+}
+li{
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 400;
+    color: #202020;
+    padding-bottom: 1rem;
+}
