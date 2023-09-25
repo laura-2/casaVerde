@@ -1,17 +1,16 @@
-import './App.css';
-import Menu from "./components/Menu"
+import NavBar from "./components/NavBar"
 import AssinaturaNewsletter from './components/AssinaturaNewsletter';
 import Box from './components/Box';
 import Ofertas from './components/Ofertas';
 
 function App() {
   return (
-      <main>
-        <Menu />
+      <>
+        <NavBar />
         <AssinaturaNewsletter />
         <Box/>
         <Ofertas/>
-      </main>
+      </>
   );
 }
 

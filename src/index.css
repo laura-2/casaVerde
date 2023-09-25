@@ -1,6 +1,11 @@
-body {
+html {
   margin: 0px;
   padding: 0px;
   font-family: 'Montserrat', sans-serif;
+  -moz-user-select: none;  
+  -ms-user-select: none;   
+  user-select: none; 
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 

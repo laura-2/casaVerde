@@ -1,14 +1,14 @@
 .box{
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    margin-top: 5%;
+    gap: 5%;
 }
 .planta{
-    width: 400px;
+    width: 30%;
 }
 .box-escrita{
     width: 23%;
-    padding: 0 0 0 5%;
 }
 .box-title{
     font-family: Montserrat;
@@ -26,14 +26,17 @@
 }
 .box-lista{
     list-style: none;
+    display: flex;
+    justify-content: flex-start;
 }
 .bolinha{
-    width: 5%; 
+    width: 15%; 
+    margin: 2%;
 }
-li{
+.lista{
     font-family: Montserrat;
     font-size: 22px;
     font-weight: 400;
     color: #202020;
-    padding-bottom: 1rem;
+    padding: 6% 0 0 3%;
 }

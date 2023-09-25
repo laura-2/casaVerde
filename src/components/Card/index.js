@@ -10,7 +10,7 @@ export default function Card({imagem, titulo, preco}) {
             <div>
                 <h3 className="card-titulo">{titulo}</h3>
                 <p className="card-preco">{preco}</p>
-                <p className="card-seta">Comprar <img alt="flecha" src={seta}/></p>
+                <a href="http" className="card-seta">Comprar <img alt="flecha" src={seta}/></a>
             </div>
         </section>
      );

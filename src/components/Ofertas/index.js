@@ -10,8 +10,8 @@ import imagem6 from "../../assets/produto-06 1.png"
 
 export default function Ofertas() {
     return (
-        <>
-        <h3 className="ofertas-p">Conheça nossas <strong className="ofertas">ofertas</strong></h3>
+        <section className="ofertas-main" id="page-f">
+        <h3 className="ofertas-title">Conheça nossas <br/><strong className="ofertas">ofertas</strong></h3>
         <div className="ofertas-grid">
             <Card imagem={imagem1} titulo="Ajuga reptans" preco="R$ 20,00"/>
             <Card imagem={imagem2} titulo="Cordyline fruticosa" preco="R$ 20,00"/>
@@ -20,6 +20,6 @@ export default function Ofertas() {
             <Card imagem={imagem5} titulo="Delairea odorata" preco="R$ 20,00"/>
             <Card imagem={imagem6} titulo="Datura metel" preco="R$ 20,00"/>
         </div>
-        </>
+        </section>
      );
 }
