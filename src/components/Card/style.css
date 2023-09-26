@@ -24,5 +24,10 @@
     font-weight: 400;
     color: #FFCB47;
     text-decoration: none;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
 
+}
+.card-seta:hover{
+    cursor: pointer;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css"
-import seta from "../../assets/seta.png"
-export default function Card({imagem, titulo, preco}) {
+
+export default function Card({imagem, titulo, preco, marca, toCart, icone}) {
     return (
         <section className="card">
             <div>
@@ -10,7 +10,7 @@ export default function Card({imagem, titulo, preco}) {
             <div>
                 <h3 className="card-titulo">{titulo}</h3>
                 <p className="card-preco">{preco}</p>
-                <a href="http" className="card-seta">Comprar <img alt="flecha" src={seta}/></a>
+                <button onClick={toCart} className="card-seta">{marca} <img alt="flecha" src={icone}/></button>
             </div>
         </section>
      );
