@@ -5,10 +5,6 @@ import Ofertas from './components/Ofertas';
 import { CartProvider } from "./context";
 
 function App() {
-  const screenWidth = window.screen.width;
-  const screenHeight = window.screen.height;
-
-  console.log(`Resolução da tela: ${screenWidth}x${screenHeight}`);
   return (
       <CartProvider>
         <NavBar />
