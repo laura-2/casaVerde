@@ -7,5 +7,6 @@ html {
   user-select: none; 
   overflow-y: scroll;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 

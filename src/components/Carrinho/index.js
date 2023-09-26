@@ -7,8 +7,7 @@ export default function Carrinho() {
     const {cart, clearCart, removeItemFromCart} = useContext(CartContext)
 
     return (
-        <div id="page-c">
-            <section className="modal-carrinho">
+            <section className="modal-carrinho" id="page-c">
 
             {cart.length > 0 ? <button onClick={()=>clearCart()} className="limpar">Limpar carrinho</button> :
                 <p style={{textAlign: "center"}}>Seu carrinho está vazio!</p>}
@@ -17,6 +16,5 @@ export default function Carrinho() {
                 preco={cartItem.preco} marca="Remover" toCart={()=> removeItemFromCart(index)} icone={remover}/>
             })}
         </section>
-        </div>
      );
 }

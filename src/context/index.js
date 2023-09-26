@@ -6,6 +6,7 @@ export const CartProvider = ({children}) => {
     const [cart, setCart] = useState([]);
 
     function addItemToCart(imagem, titulo, preco){
+        alert('Item adicionado ao carrinho!')
         const itemObject = {imagem, titulo, preco};
         setCart([...cart, itemObject]);
     }
