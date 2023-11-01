@@ -6,6 +6,10 @@
     color: #202020;
 
 }
+
+.card-imagem{
+    width: 200px;
+}
 .ofertas{
     font-family: Elsie Swash Caps;
     font-size: 82px;
@@ -20,4 +24,10 @@
 }
 .ofertas-main{
     margin: 5% 0;
+}
+.estilo-oferta-titulo{
+    font-size: 32px;
+}
+.estilo-oferta-preco{
+    font-size: 16px;
 }

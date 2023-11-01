@@ -2,11 +2,12 @@
     width: 35%;
     display: block;
     color: #202020;
-    margin-top: 12%;
+    justify-content: center;
 }
 .secao-arvore{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .arvore{
     z-index: 2;
@@ -33,8 +34,7 @@
     font-size: 16px;
 }
 .secao-button{
-    background-color: #FFCB47;
-    box-shadow: 10px 10px 30px rgba(255, 203, 71, 0.3);
+    background-color: #FFCB47;;
     color: white;
     padding: 15px 20px;
     border-color: #FFCB47;

@@ -1,13 +1,38 @@
 .modal-carrinho{
-    width: 28%;
+    width: 20%;
+    max-height: 80%;
+    overflow-y: scroll;
+    overflow-x: hidden;
     position: absolute;
     display: block;
-    left: 70%;
+    left: 78%;
     top: 12%;
     background-color: #ffffff;
     border: 5px solid #FFCB47;
-    border-radius: 20px;
+    border-radius: 16px;
     z-index: 3;
+}
+.cart{
+    width: 130px;
+}
+.cart-title{
+    font-size: 22px;
+}
+.cart-price{
+    font-size: 15px;
+}
+.modal-carrinho::-webkit-scrollbar {
+    width: 3px;
+}
+
+.modal-carrinho::-webkit-scrollbar-track {
+    background: transparent
+}
+
+.modal-carrinho::-webkit-scrollbar-thumb {
+    background-color: transparent;   
+    border-radius: 20px;       
+    border: 5px solid transparent;
 }
 .closeModal{
     position: absolute;
@@ -20,7 +45,7 @@
     background-color: #FFCB47;
     color: #ffffff;
     border-radius: 8px;
-    padding: 3%;
+    padding: 2%;
     font-size: 16px;
-    margin: 2% 0 0 5%;
+    margin: 2% 0 0 53%;
 }

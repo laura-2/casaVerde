@@ -14,20 +14,9 @@
     display: flex;
     z-index: 1;
     gap: 10px;
-    flex-wrap: nowrap;
 }
 .header-lista-link{
     text-decoration: none;
     color: #202020;
     font-size: 16px;
-}
-.carrinho-link{
-    text-decoration: none;
-    color: #202020;
-    font-size: 16px;
-    z-index: 2;
-    font-family: 'Montserrat', sans-serif;
-    border: none;
-    background-color: #FFCB47;
-    margin-left: -23%;
 }
