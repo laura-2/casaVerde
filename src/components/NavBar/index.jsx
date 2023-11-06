@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Logo from '../../assets/logo.png';
 import FundoAmarelo from '../../assets/fundo-amarelo.png';
 import './style.css';
 import Carrinho from '../Carrinho';
+import { CartContext } from '../../context';
 export default function NavBar() {
+  const { cart } = useContext(CartContext);
   const [open, setOpen] = useState(false);
   const headerOptions = ['Como fazer', 'Ofertas', 'Novidades', 'Meu carrinho'];
   return (
@@ -15,6 +17,7 @@ export default function NavBar() {
         <ul className="header-lista">
           {headerOptions.map((option, index) => {
             return (
+              <span>
               <a
                 href={`#page-${option[index]}`}
                 onClick={option === 'Meu carrinho' ? () => setOpen(!open) : null}
@@ -23,6 +26,9 @@ export default function NavBar() {
               >
                 {option}
               </a>
+              {option === 'Meu carrinho' ? 
+              <p className='cart-tamanho'>{cart.length > 0 ? cart.length : null}</p> : null}
+              </span>
             );
           })}
         </ul>
