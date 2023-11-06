@@ -9,10 +9,11 @@ export default function Card({ imagem, titulo, preco, marca, toCart, icone, card
       </div>
       <div>
         <h3 className={`card-titulo ${cardTitle}`}>{titulo}</h3>
-        <p className={`card-preco ${cardPrice}`}>{preco}</p>
+        <p className={`card-preco ${cardPrice}`}>R$ {preco}</p>
         <button onClick={toCart} className="card-seta">
           {marca} <img alt="flecha" src={icone} />
         </button>
+        
       </div>
     </section>
   );

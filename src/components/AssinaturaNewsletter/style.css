@@ -1,5 +1,5 @@
 .secao{
-    width: 35%;
+    width: 30%;
     display: block;
     color: #202020;
     justify-content: center;
@@ -11,7 +11,7 @@
 }
 .arvore{
     z-index: 2;
-    width: 40%;
+    width: 45%;
 }
 .secao-casa{
     font-size: 22px;

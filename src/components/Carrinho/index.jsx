@@ -4,7 +4,7 @@ import Card from '../Card';
 import './style.css';
 import remover from '../../assets/remove.png';
 export default function Carrinho() {
-  const { cart, clearCart, removeItemFromCart } = useContext(CartContext);
+  const { cart, count,clearCart, removeItemFromCart, countAdd, countRemove } = useContext(CartContext);
 
   return (
     <section className="modal-carrinho" id="page-c">
@@ -17,8 +17,9 @@ export default function Carrinho() {
       )}
       {cart.map((cartItem, index) => {
         return (
+          <section key={index}>
           <Card
-            key={index}
+            key={cartItem.id}
             itemIndex={index}
             imagem={cartItem.imagem}
             titulo={cartItem.titulo}
@@ -30,6 +31,12 @@ export default function Carrinho() {
             cardTitle="cart-title"
             cardPrice="cart-price"
           />
+          <section className="botoes">
+            <button className="botaoContador" onClick={()=>countRemove(cartItem.id)}>-</button>
+            <p>{count}</p>
+            <button className="botaoContador" onClick={()=>countAdd(cartItem.id)}>+</button>
+          </section>
+          </section>
         );
       })}
     </section>

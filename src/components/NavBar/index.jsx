@@ -17,7 +17,7 @@ export default function NavBar() {
         <ul className="header-lista">
           {headerOptions.map((option, index) => {
             return (
-              <span>
+              <span key={index}>
               <a
                 href={`#page-${option[index]}`}
                 onClick={option === 'Meu carrinho' ? () => setOpen(!open) : null}
