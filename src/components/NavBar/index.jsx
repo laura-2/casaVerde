@@ -17,18 +17,15 @@ export default function NavBar() {
         <ul className="header-lista">
           {headerOptions.map((option, index) => {
             return (
-              <span key={index}>
               <a
                 href={`#page-${option[index]}`}
                 onClick={option === 'Meu carrinho' ? () => setOpen(!open) : null}
                 className="header-lista-link"
                 key={index}
               >
-                {option}
+                {option}{option === 'Meu carrinho' ? 
+              <p className='cart-tamanho'>{cart.length > 0 ? `(${cart.length})` : null}</p> : null}
               </a>
-              {option === 'Meu carrinho' ? 
-              <p className='cart-tamanho'>{cart.length > 0 ? cart.length : null}</p> : null}
-              </span>
             );
           })}
         </ul>
