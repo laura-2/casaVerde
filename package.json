@@ -39,8 +39,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.23.2",
-    "@babel/preset-env": "^7.23.2",
     "@babel/preset-react": "^7.22.15",
     "eslint": "^8.52.0",
     "eslint-config-prettier": "^9.0.0",
