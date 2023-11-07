@@ -20,10 +20,11 @@
 .ofertas-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-left:3%;
+    justify-content: center;
+    align-items: center;
 }
 .ofertas-main{
-    margin: 5% 0;
+    margin: 3% 0;
 }
 .estilo-oferta-titulo{
     font-size: 32px;

@@ -34,8 +34,8 @@ export default function AssinaturaNewsletter() {
       );
   }
   return (
-    <form className="secao-arvore" id="page-i" onSubmit={handleSubmit}>
-      <section className="secao">
+    <section className="secao-arvore" id="page-i">
+      <form className="secao" onSubmit={handleSubmit}>
         <p className="secao-casa">
           Sua casa com as
           <br />
@@ -57,8 +57,8 @@ export default function AssinaturaNewsletter() {
             Assinar newsletter
           </button>
         </div>
-      </section>
+      </form>
       <img src={Arvore} alt="Arvore" className="arvore" />
-    </form>
+    </section>
   );
 }

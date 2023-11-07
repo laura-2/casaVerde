@@ -1,7 +1,8 @@
 .header{
     display: flex;
     justify-content: space-around;
-    margin-top: 1%;
+    align-items: center;
+    margin-top: 2%;
 }
 .header-fundo{
     width: 50%;
@@ -19,9 +20,4 @@
     text-decoration: none;
     color: #202020;
     font-size: 16px;
-}
-.cart-tamanho{
-    position: absolute;
-    top: 2%;
-    padding-left: 8.5%;
 }
