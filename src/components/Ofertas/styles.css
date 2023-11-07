@@ -31,3 +31,6 @@
 .estilo-oferta-preco{
     font-size: 16px;
 }
+.botoes-hidden{
+    display: none;
+}

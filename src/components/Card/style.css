@@ -21,8 +21,22 @@
     text-decoration: none;
     border: 1px solid #ffffff;
     background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 
 }
 .card-seta:hover{
     cursor: pointer;
+}
+.botoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botaoContador{
+    border: none;
+    color: #FFCB47;
+    font-size: 30px;
+    background: none;
 }

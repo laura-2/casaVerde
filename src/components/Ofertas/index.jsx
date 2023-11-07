@@ -6,7 +6,7 @@ import { CartContext } from '../../context';
 import seta from '../../assets/seta.png';
 
 export default function Ofertas() {
-  const { addItemToCart, count, countAdd, countRemove } = useContext(CartContext);
+  const { addItemToCart } = useContext(CartContext);
   return (
     <section className="ofertas-main" id="page-f">
       <h3 className="ofertas-title">
@@ -30,6 +30,7 @@ export default function Ofertas() {
               cardWidth="card-imagem"
               cardTitle="estilo-oferta-titulo"
               cardPrice="estilo-oferta-preco"
+              botoesHidden="botoes-hidden"
             />
           );
         })}
