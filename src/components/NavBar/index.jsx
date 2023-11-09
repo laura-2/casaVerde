@@ -6,10 +6,11 @@ import Carrinho from "../Carrinho";
 import { CartContext } from "../../context";
 import Conta from "../Conta";
 export default function NavBar() {
-  const { cart } = useContext(CartContext);
+  const { cart, email } = useContext(CartContext);
   const [open, setOpen] = useState(false);
   const [conta, setConta] = useState(false);
-  const headerOptions = ["Como fazer", "Ofertas", "Novidades", "Meu carrinho", "Minha conta"];
+  const headerOptions = ["Como fazer", "Ofertas", "Meu carrinho", email || "Minha conta"];
+
   return (
     <header className="header" id="home">
       <img src={Logo} alt="Logo"/>
@@ -32,7 +33,7 @@ export default function NavBar() {
       </ul>
       <img src={FundoAmarelo} alt="Fundo amarelo" className="header-fundo" />
       {open && <Carrinho />}
-      {conta && <Conta/>}
+      {conta && <Conta closeModal={()=> setConta(!conta)}/>}
     </header>
   );
 }

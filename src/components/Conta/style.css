@@ -1,18 +1,18 @@
 .modal-conta{
     width: 20%;
-    max-height: 50%;
+    max-height: 70%;
     overflow-y: hidden;
     overflow-x: hidden;
-    position: absolute;
+    position: fixed;
     display: block;
-    left: 40%;
-    top: 30%;
+    left: 38%;
+    top: 15%;
     background-color: #ffffff;
     border: 1px solid #ffffff;
     padding: 2%;
     border-radius: 16px;
     z-index: 3;
-    box-shadow: 1px 1px 5px 1000px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 5px 100vh rgba(0, 0, 0, 0.3);
 }
 .conta-titulo{
     color: #FFCB47;
@@ -41,6 +41,12 @@
     border: 1px solid black;
     border-radius: 8px;
 }
+.conta-botoes{
+    display: flex;
+    justify-content:end;
+    gap: 3%;
+    margin: 8% 0 0 0;
+}
 .conta-botao{
     color: #ffffff;
     background-color: #FFCB47;
@@ -49,4 +55,23 @@
     font-size: 16px;
     padding: 4%;
     
+}
+.conta-botao-cancelar{
+    color: #ffffff;
+    background-color: #afa999;
+    border: 1px solid #afa999;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 4%;
+}
+.conta-radio{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 0.3rem;
+}
+.icon-close{
+    color: #ffcb47; 
+    position: absolute;
+    right: 20px;
 }

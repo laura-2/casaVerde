@@ -1,33 +1,71 @@
-import React, { useState } from 'react';
-import './style.css';
-import axios from 'axios';
-export default function Conta() {
-    const [email, setEmail] = useState('')
-    const [senha, setSenha] = useState('')
-
-    function handleSubmit(e){
-        e.preventDefault()
-        axios.post('http://localhost:8081/usuarios', {email, senha})
-        .then(res => console.log(res))
-        .catch(err => console.log(err))
-    }
-
+import React, { useContext } from "react";
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import "./style.css";
+import { CartContext } from "../../context";
+export default function Conta({closeModal}) {
+    const {acao, setEmail, setSenha, setAcao, handleSubmit} = useContext(CartContext)
+  
   return (
     <section className="modal-conta" id="page-">
-        <h1 className='conta-titulo'>Minha conta</h1>
-        <form className='conta-form' onSubmit={handleSubmit}>
-            <div className="conta-input">
-                <label className="titulo-input" htmlFor='email'>Email</label>
-                <input type="email" name="email" id="email" className="espaco-input" placeholder='joaosilva@gmail.com'
-                 onChange={e => setEmail(e.target.value)}/>
-            </div>
-            <div className="conta-input">
-                <label className="titulo-input" htmlFor='password'>Senha</label>
-                <input type="password" name='password' id='password' className="espaco-input" placeholder='*******'
-                 onChange={e => setSenha(e.target.value)} />
-            </div>
-            <button className='conta-botao'>Salvar</button>
-        </form>
+    <CloseRoundedIcon className="icon-close" onClick={closeModal}/>
+      <h1 className="conta-titulo">Minha conta</h1>
+      <form className="conta-form" onSubmit={handleSubmit}>
+        <section className="conta-radio">
+          <p><strong>O que você quer fazer?</strong></p>
+          <label>
+            <input
+              type="radio"
+              value="registro"
+              checked={acao === "registro"}
+              onChange={(e) => setAcao(e.target.value)}
+            />
+            Cadastrar email
+          </label>
+          <label>
+            <input
+              type="radio"
+              value="logar"
+              checked={acao === "logar"}
+              onChange={(e) => setAcao(e.target.value)}
+            />
+            Entrar na minha conta
+          </label>
+        </section>
+        <div className="conta-input">
+          <label className="titulo-input" htmlFor="email">
+            Email
+          </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            className="espaco-input"
+            placeholder="joaosilva@gmail.com"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div className="conta-input">
+          <label className="titulo-input" htmlFor="password">
+            Senha
+          </label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            className="espaco-input"
+            placeholder="*******"
+            onChange={(e) => setSenha(e.target.value)}
+          />
+        </div>
+        <section className="conta-botoes">
+        <button className="conta-botao-cancelar" onClick={closeModal}>
+          Cancelar
+        </button>
+        <button className="conta-botao" type="submit">
+          Salvar
+        </button>
+        </section>
+      </form>
     </section>
   );
 }

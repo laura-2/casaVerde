@@ -1,19 +1,13 @@
-import NavBar from './components/NavBar';
-import AssinaturaNewsletter from './components/AssinaturaNewsletter';
-import Box from './components/Box';
-import Ofertas from './components/Ofertas';
-import { CartProvider } from './context';
-import SetUpPage from './components/SetUpPage';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <CartProvider>
-      <NavBar />
-      <AssinaturaNewsletter />
-      <Box />
-      <Ofertas />
-      <SetUpPage/>
-    </CartProvider>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
