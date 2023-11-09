@@ -40,7 +40,7 @@ export default function Conta({closeModal}) {
             name="email"
             id="email"
             className="espaco-input"
-            placeholder="joaosilva@gmail.com"
+            placeholder="pedrosilva@gmail.com"
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
