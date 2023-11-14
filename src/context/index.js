@@ -16,7 +16,7 @@ export const CartProvider = ({ children }) => {
         .post("http://localhost:8081/usuarios", { email, senha, acao })
         .then((res) => alert(acao === "registro" ? "Email cadastrado com sucesso! Boas compras" :
             "Logado com sucesso! Boas compras"))
-        .catch((err) => alert("Insira um email válido!"));
+        .catch((err) => alert(acao === "registro" ? "Email já cadastrado!" : "Email não encontrado!"));
     } else {
       alert("Preencha todos os campos!");
     }
