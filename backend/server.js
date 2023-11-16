@@ -1,4 +1,5 @@
 const express = require('express')
+const { body, validationResult } = require('express-validator');
 const mysql = require('mysql')
 const cors = require('cors')
 
@@ -12,7 +13,21 @@ const db = mysql.createConnection({
     database: "conta"
 })   
 
-app.post('/usuarios', async (req, res) => {
+app.post('/usuarios', 
+[
+  body('email').notEmpty().withMessage('O email é obrigatório').isEmail().withMessage('O e-mail não é válido'),
+  body('senha').isLength({ min: 8 }).withMessage('A senha deve ter no mínimo 8 caracteres'),
+],
+
+async (req, res) => {
+
+   // Verifica os resultados da validação
+   const errors = validationResult(req);
+
+   // Se houver erros, retorna uma resposta com os erros
+   if (!errors.isEmpty()) {
+     return res.status(400).json({ errors: errors.array() });
+   }
   try {
     const { email, senha, acao } = req.body;
 

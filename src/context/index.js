@@ -11,15 +11,12 @@ export const CartProvider = ({ children }) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (email || senha !== "") {
       axios
         .post("http://localhost:8081/usuarios", { email, senha, acao })
         .then((res) => alert(acao === "registro" ? "Email cadastrado com sucesso! Boas compras" :
             "Logado com sucesso! Boas compras"))
-        .catch((err) => alert(acao === "registro" ? "Email já cadastrado!" : "Email não encontrado!"));
-    } else {
-      alert("Preencha todos os campos!");
-    }
+        .catch((err) => alert(acao === "registro" || senha === "" ? "Preencha todos os campos corretamente!" : "Email não encontrado!"));
+        console.log(email, senha, acao)
   }
 
 
