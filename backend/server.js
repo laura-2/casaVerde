@@ -78,6 +78,24 @@ async (req, res) => {
     res.status(500).json({ error: 'Erro ao processar a solicitação.' });
   }
 });
+app.post('/usuarios', (req, res) => {
+    const { acao, carrinho } = req.body;
+
+    if (acao === "registro") {
+      const checkLoginQuery = 'INSERT INTO usuarios (carrinho) VALUES (?)';
+      db.query(checkLoginQuery, [carrinho], () => {
+        res.status(200).json({ message: 'Carrinho cadastrado!' });
+      });
+    } else if(acao === "logar") {
+      const checkLoginQuery = 'UPDATE usuarios SET carrinho = ?';
+      db.query(checkLoginQuery, [carrinho], () => {
+        res.status(200).json({ message: 'Carrinho atualizado!' });
+      })
+    } else {
+      res.status(400).json({ error: 'Ação inválida' })
+    }
+});
+
 
 app.listen(8081, ()=>{
     console.log("Listening...")

@@ -9,6 +9,8 @@ export const CartProvider = ({ children }) => {
   const [senha, setSenha] = useState("");
   const [acao, setAcao] = useState("registro");
 
+  const carrinho = cart.length;
+
   function handleSubmit(e) {
     e.preventDefault();
       axios
@@ -17,6 +19,13 @@ export const CartProvider = ({ children }) => {
             "Logado com sucesso! Boas compras"))
         .catch((err) => alert(acao === "registro" || senha === "" ? "Preencha todos os campos corretamente!" : "Email não encontrado!"));
         console.log(email, senha, acao)
+  }
+  function accountCart() {
+      axios
+        .put("http://localhost:8081/usuarios", { carrinho })
+        .then((res) => alert("Carrinho atualizado!"))
+        .catch((err) => alert("Erro no carrinho!", err));
+        console.log(carrinho)
   }
 
 
@@ -44,7 +53,7 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ email, setEmail, senha, setSenha, setAcao, acao, handleSubmit, cart, setCart, addItemToCart, removeItemFromCart, clearCart }}
+      value={{ email, setEmail, senha, setSenha, setAcao, acao, handleSubmit, cart, accountCart, setCart, addItemToCart, removeItemFromCart, clearCart }}
     >
       {children}
     </CartContext.Provider>

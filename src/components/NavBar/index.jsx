@@ -10,7 +10,7 @@ export default function NavBar() {
   const [open, setOpen] = useState(false);
   const [conta, setConta] = useState(false);
   const headerOptions = ["Como fazer", "Ofertas", "Meu carrinho", email || "Minha conta"];
-
+  
   return (
     <header className="header" id="home">
       <img src={Logo} alt="Logo"/>
